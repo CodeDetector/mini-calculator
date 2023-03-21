@@ -4,41 +4,44 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 class CalculatorTest {
-    private static final double DELTA = 1e-15;
+
     Calculator calculator = new Calculator();
-
+    private static final double DELTA = 1e-15;
     @Test
-    void multiplication() {
-        assertEquals(15, calculator.multiplication(5,3), DELTA);
-        assertEquals(24, calculator.multiplication(6,4), DELTA);
-        assertNotEquals(120, calculator.multiplication(5,8), DELTA);
-        assertNotEquals(80, calculator.multiplication(4,10), DELTA);
+    void computeFactorial() {
+        assertEquals( 120, MathCalculator.computeFactorial(5), DELTA);
+        assertEquals( 1, MathCalculator.computeFactorial(0), DELTA);
+        assertEquals( 2, MathCalculator.computeFactorial(2), DELTA);
+        assertEquals( 3628800, MathCalculator.computeFactorial(10), DELTA);
+        assertEquals( 720, MathCalculator.computeFactorial(6), DELTA);
 
     }
 
     @Test
-    void cuberoot() {
-        assertEquals(5, calculator.cuberoot(125), DELTA);
-        assertEquals(-5, calculator.cuberoot(-125), DELTA);
-        assertNotEquals(11, calculator.cuberoot(121), DELTA);
-        assertNotEquals(3, calculator.cuberoot(8), DELTA);
+    void computeSquareRoot() {
+        assertEquals( 4, MathCalculator.computeSquareRoot(16), DELTA);
+        assertEquals( 1, MathCalculator.computeSquareRoot(1), DELTA);
+        assertEquals( 9, MathCalculator.computeSquareRoot(81), DELTA);
+        assertEquals( 6, MathCalculator.computeSquareRoot(36), DELTA);
     }
 
     @Test
-    void square() {
+    void computePower() {
+        assertEquals(8, MathCalculator.computePower(2, 3), DELTA);
+        assertEquals( 1, MathCalculator.computePower(1, 3), DELTA);
+        assertEquals(81, MathCalculator.computePower(3, 4), DELTA);
+        assertEquals( 64, MathCalculator.computePower(4, 3), DELTA);
+        assertEquals( 64, MathCalculator.computePower(4, 3), DELTA);
 
-        assertEquals( 16, calculator.square(4), DELTA);
-        assertEquals(1, calculator.square(1), DELTA);
-        assertNotEquals( 10, calculator.square(3), DELTA);
-        assertNotEquals(20, calculator.square(4), DELTA);
     }
 
     @Test
-    void sub() {
-        assertEquals(2, calculator.sub(5,3), DELTA);
-        assertEquals(-2, calculator.sub(6,8), DELTA);
-        assertNotEquals(3, calculator.sub(5,8), DELTA);
-        assertNotEquals(-1, calculator.sub(5,4), DELTA);
+    void computeNaturalLog() {
+        assertEquals( 0, MathCalculator.computeNaturalLog(1), DELTA);
+
     }
+
+
 }
