@@ -17,6 +17,21 @@ pipeline {
 		sh "docker push dhruvsharma983/docker-push:latest"
 		}
 		}
+		stage('Clean Docker Images'){
+		steps {
+			sh 'docker rmi -f dhruvsharma983/docker-push'
+		}
+		}
+		stage('Deploy and Run Image'){
+		steps {
+			annsiblePlaybook becomeUser: null , colorized: true ,disableHostKeyChecking:true , installation: 'Ansible' , inventory: 'inventory' ,playbook:'playbook.yml' , sudoUser: null 
+		}
+		}
+	}
+	post {
+		always {
+			sh 'docker logout'
+		}
 	}
 
 }
