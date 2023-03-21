@@ -1,0 +1,7 @@
+- name: Pull docker image of calculator
+  hosts: all 
+  tasks:
+    - name: pull docker image
+      shell: docker pull dhruvsharma983/docker-push
+    - name: running container
+      shell: docker run -it -d dhruvsharma983/docker-push
