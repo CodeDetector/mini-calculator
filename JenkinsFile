@@ -8,6 +8,14 @@ pipeline {
 		stage('Maven Build'){
 			sh 'mvn clean install'
 		}
+		stage('Test'){
+            steps{
+                 dir('/root/SPE_PROJECT/src/test') {
+                    sh "mvn test"
+               	 }
+
+           	 }
+        		}
 		stage('Docker Build Image'){
 			sh 'docker build -t dhruvsharma983/docker-push .'
 		}
