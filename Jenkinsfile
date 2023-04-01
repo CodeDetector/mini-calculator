@@ -9,12 +9,12 @@ pipeline {
 		}
 		stage('Maven Build'){
 		steps{
-			sh 'mvn clean install'
+			sh 'mvn clean package'
 		}
 		}
 		stage('Test'){
             	steps{
-                     dir('/root/SPE_PROJECT/src/test') {
+                     dir('/root/SPE_PROJECT') {
                     	sh "mvn test"
                	 	}
 
