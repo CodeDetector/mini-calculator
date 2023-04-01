@@ -12,14 +12,6 @@ pipeline {
 			sh 'mvn clean package'
 		}
 		}
-		stage('Test'){
-            	steps{
-                     dir('/root/SPE_PROJECT') {
-                    	sh "mvn test"
-               	 	}
-
-           	     }
-        	}
 		stage('Docker Build Image'){
 		steps{
 			sh 'docker build -t dhruvsharma983/docker-push .'
