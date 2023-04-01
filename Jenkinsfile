@@ -3,27 +3,35 @@ pipeline {
 	
 	stages {
 		stage('checkout'){
+		steps{
 			checkout scm
 		}
+		}
 		stage('Maven Build'){
+		steps{
 			sh 'mvn clean install'
 		}
+		}
 		stage('Test'){
-            steps{
-                 dir('/root/SPE_PROJECT/src/test') {
-                    sh "mvn test"
-               	 }
+            	steps{
+                     dir('/root/SPE_PROJECT/src/test') {
+                    	sh "mvn test"
+               	 	}
 
-           	 }
-        		}
+           	     }
+        	}
 		stage('Docker Build Image'){
+		steps{
 			sh 'docker build -t dhruvsharma983/docker-push .'
+		     }
 		}
 		stage('Publish Docker Images'){
-		withCredentials([usernamePassword(credentialsId:'dockerCreds',usernameVariable:'USERNAME',passwordVariable:'PASSWORD')]){
-		sh "docker login -u ${env.USERNAME} -p ${env.PASSWORD}"
-		sh "docker push dhruvsharma983/docker-push:latest"
-		}
+		steps{
+			withCredentials([usernamePassword(credentialsId:'dockerCreds',usernameVariable:'USERNAME',passwordVariable:'PASSWORD')]){
+			sh "docker login -u ${env.USERNAME} -p ${env.PASSWORD}"
+			sh "docker push dhruvsharma983/docker-push:latest"
+			}
+		     }
 		}
 		stage('Clean Docker Images'){
 		steps {
