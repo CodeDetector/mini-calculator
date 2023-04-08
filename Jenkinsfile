@@ -32,7 +32,7 @@ pipeline {
 		}
 		stage('Deploy and Run Image'){
 		steps {
-			annsiblePlaybook becomeUser: null , colorized: true ,disableHostKeyChecking:true , installation: 'Ansible' , inventory: 'inventory' ,playbook:'playbook.yml' , sudoUser: null 
+			ansiblePlaybook becomeUser: null , colorized: true ,disableHostKeyChecking:true , installation: 'Ansible' , inventory: 'inventory' ,playbook:'playbook.yml' , sudoUser: null 
 		}
 		}
 	}
