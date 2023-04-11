@@ -1,8 +1,11 @@
 package calculator;// package src;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Calculator {
+    private static final Logger logger = LogManager.getLogger(Calculator.class);
     public Calculator() {
     }
 
@@ -27,7 +30,7 @@ public class Calculator {
             } catch (InputMismatchException error) {
                 System.out.println("Please Input a integer Choice from the given menu");
                 return;
-            }
+            }https://github.com/CodeDetector/mini-calculator.git
 
             switch (choice) {
                 case 1:
@@ -35,6 +38,7 @@ public class Calculator {
                     System.out.print("Please input a number whose factorial is to be calculated : ");
                     double factorial = input.nextDouble();
                     System.out.println("Factorial of " + factorial + " is : " + calculator.computeFactorial(factorial) + "\n");
+                    logger.info("Factorial of " + factorial + " is : " + calculator.computeFactorial(factorial));
                     break;
 
                 case 2:
