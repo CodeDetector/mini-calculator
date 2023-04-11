@@ -74,12 +74,14 @@ public class Calculator {
 
     public static double computeFactorial(double inp) {
         double result = fact(inp);
+        logger.info("Factorial of " + inp + " is : " + result);
         return result;
     }
 
 
     public static double computeSquareRoot(double inp) {
         double result = Math.sqrt(inp);
+        logger.info("SquareRoot of " + inp + " is : " + result);
         return result;
     }
 
