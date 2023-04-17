@@ -1,10 +1,6 @@
 import calculator.Calculator ;
-
-<<<<<<< HEAD
 import org.junit.Test ;
-=======
 import org.junit.Test;
->>>>>>> 2b63091 (Checking ..)
 
 import static org.junit.Assert.*;
 
@@ -15,11 +11,8 @@ public class CalculatorTest {
     private static final double DELTA = 1e-15;
     
     @Test
-<<<<<<< HEAD
    public void computeFactorial() {
-=======
     public void computeFactorial() {
->>>>>>> 2b63091 (Checking ..)
         assertEquals( 120, calculator.computeFactorial(5), DELTA);
         assertEquals( 1, calculator.computeFactorial(0), DELTA);
         assertEquals( 2, calculator.computeFactorial(2), DELTA);
