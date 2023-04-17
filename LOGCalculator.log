@@ -13,3 +13,18 @@
 17/04/2023:11:20:22 294 [Calculator.java] [INFO] calculator.Calculator SquareRoot of 1.0 is : 1.0
 17/04/2023:11:20:22 297 [Calculator.java] [INFO] calculator.Calculator SquareRoot of 81.0 is : 9.0
 17/04/2023:11:20:22 320 [Calculator.java] [INFO] calculator.Calculator SquareRoot of 36.0 is : 6.0
+17/04/2023:12:24:11 939 [Calculator.java] [INFO] calculator.Calculator 2.0 raised to the power of 3.0 is : 8.0
+17/04/2023:12:24:12 282 [Calculator.java] [INFO] calculator.Calculator 1.0 raised to the power of 3.0 is : 1.0
+17/04/2023:12:24:12 312 [Calculator.java] [INFO] calculator.Calculator 3.0 raised to the power of 4.0 is : 81.0
+17/04/2023:12:24:12 371 [Calculator.java] [INFO] calculator.Calculator 4.0 raised to the power of 3.0 is : 64.0
+17/04/2023:12:24:12 373 [Calculator.java] [INFO] calculator.Calculator 4.0 raised to the power of 3.0 is : 64.0
+17/04/2023:12:24:12 602 [Calculator.java] [INFO] calculator.Calculator Natural log of 1.0 is : 0.0
+17/04/2023:12:24:12 622 [Calculator.java] [INFO] calculator.Calculator Factorial of 5.0 is : 120.0
+17/04/2023:12:24:12 623 [Calculator.java] [INFO] calculator.Calculator Factorial of 0.0 is : 1.0
+17/04/2023:12:24:12 624 [Calculator.java] [INFO] calculator.Calculator Factorial of 2.0 is : 2.0
+17/04/2023:12:24:12 638 [Calculator.java] [INFO] calculator.Calculator Factorial of 10.0 is : 3628800.0
+17/04/2023:12:24:12 639 [Calculator.java] [INFO] calculator.Calculator Factorial of 6.0 is : 720.0
+17/04/2023:12:24:12 641 [Calculator.java] [INFO] calculator.Calculator SquareRoot of 16.0 is : 4.0
+17/04/2023:12:24:12 658 [Calculator.java] [INFO] calculator.Calculator SquareRoot of 1.0 is : 1.0
+17/04/2023:12:24:12 658 [Calculator.java] [INFO] calculator.Calculator SquareRoot of 81.0 is : 9.0
+17/04/2023:12:24:12 659 [Calculator.java] [INFO] calculator.Calculator SquareRoot of 36.0 is : 6.0

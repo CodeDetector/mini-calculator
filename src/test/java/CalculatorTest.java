@@ -10,9 +10,8 @@ public class CalculatorTest {
     Calculator calculator = new Calculator();
     private static final double DELTA = 1e-15;
     
-    @Test
+   @Test
    public void computeFactorial() {
-    public void computeFactorial() {
         assertEquals( 120, calculator.computeFactorial(5), DELTA);
         assertEquals( 1, calculator.computeFactorial(0), DELTA);
         assertEquals( 2, calculator.computeFactorial(2), DELTA);
