@@ -88,7 +88,8 @@ public class Calculator {
 
     public static double computePower(double inp1, double inp2) {
         double result = Math.pow(inp1,inp2);
-        return result;
+	logger.info(inp1+" raised to the power of "+inp2 +" is : " +result);
+	return result;
     }
 
     public static double computeNaturalLog(double inp) {
@@ -101,9 +102,12 @@ public class Calculator {
             }
             else {
                 result = Math.log(inp);
+		logger.info("Natural log of "+ inp + " is : " + result  ) ; 
             }
         } catch (ArithmeticException error) {
             System.out.println("[EXCEPTION - LOG] - Cannot find log of negative numbers " + error.getLocalizedMessage());
+
+	    logger.info("Cannot find log of negative numbers "+error.getLocalizedMessage());
         }
         return result;
     }
